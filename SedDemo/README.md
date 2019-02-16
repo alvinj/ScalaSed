@@ -4,7 +4,7 @@ This project demonstrates how to use the Sed classes.
 
 
 
-## `Sed` example
+## Sed example
 
 Here’s a little example of how to use the `Sed` class:
 
@@ -61,7 +61,7 @@ This source code comes from the _sedDemo.sh_ file in the _ScriptExample_ directo
 
 
 
-## `MultilineSed`
+## MultilineSed
 
 There’s also a class named `MultilineSed` that lets you make updates to the previous line depending on what you find on the current line. That’s useful when you want to transform two lines like this:
 
@@ -77,6 +77,8 @@ into one output line like this:
 ````
 
 I’ll add documentation for `MultilineSed` in the future, but for now you can look at [MultilineSed.scala](https://github.com/alvinj/ScalaSed/blob/master/SedDemo/src/main/scala/sed/MultilineSedTest.scala) to get a hint at how it currently works.
+
+(This class also needs a better name. It’s more like “Two-line Sed” than “MultilineSed.”)
 
 
 
