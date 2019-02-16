@@ -46,7 +46,7 @@ into one output line like this:
 <h2>Hello</h2>
 ````
 
-I’ll add documentation for `MultilineSed` in the future, but for now you can look at [src/main/scala/sed/MultilineSed.scala](MultilineSed.scala) to see how it works.
+I’ll add documentation for `MultilineSed` in the future, but for now you can look at [https://github.com/alvinj/ScalaSed/blob/master/SedDemo/src/main/scala/sed/MultilineSedTest.scala](MultilineSed.scala) to see how it works.
 
 
 
