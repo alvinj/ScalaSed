@@ -15,16 +15,3 @@ class Sed(filename: String, f:(String) => String) {
     }
 
 }
-
-// object SedTest extends App {
-//
-//     def f(currentLine: String): String = currentLine match {
-//         case r"^# ${header}@(.*)"  => s"<h1>$header</h1>"
-//         case r"^## ${header}@(.*)" => s"<h2>$header</h2>"
-//         case _                     => currentLine
-//     }
-//
-//     val sed = new Sed("EXAMPLE.md", f)
-//     sed.run
-//
-// }
