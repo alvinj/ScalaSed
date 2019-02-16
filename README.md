@@ -9,7 +9,8 @@ See the [SedDemo](SedDemo) project for examples of how to
 use `Sed`.
 
 
-## Introduction
+
+## Brief introduction
 
 As a very brief introduction, there are currently two
 different versions of Sed:
@@ -17,7 +18,7 @@ different versions of Sed:
 - `Sed` lets you operate on one line at a time
 - `MultilineSed` currently lets you merge/coalesce two lines
   into one, such as when you want to convert this:
-  
+
 ````
 Hello
 -----
