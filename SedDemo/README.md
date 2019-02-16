@@ -17,7 +17,7 @@ object SedTest extends App {
         case _                     => currentLine
     }
 
-    val sed = new Sed("/Users/al/Projects/Scala/Tests/Files/ScalaSed/EXAMPLE.md", f)
+    val sed = new Sed("/Users/al/Projects/ScalaSed/EXAMPLE.md", f)
     sed.run
 
 }
