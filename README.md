@@ -3,9 +3,10 @@
 This is a little combination of projects:
 
 - The _Sed_ project provides Unix/Linux `sed`-like capabilities
-- The _SedDemo_ provides demonstrates how to use `Sed`
+- The _SedDemo_ provides demonstrates how to use _Sed_
 
-See the SedDemo project for examples of how to use `Sed`.
+If this is your first time here you’ll probably want to look at
+the SedDemo project first to see examples of how to use Sed.
 
 
 
