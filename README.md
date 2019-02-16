@@ -1,0 +1,37 @@
+# ScalaSed
+
+This is a little combination of projects:
+
+- The _Sed_ project provides `sed`-like capabilities
+- The _SedDemo_ provides demonstrates how to use `Sed`
+
+See the [SedDemo](SedDemo) project for examples of how to
+use `Sed`.
+
+
+## Introduction
+
+As a very brief introduction, there are currently two
+different versions of Sed:
+
+- `Sed` lets you operate on one line at a time
+- `MultilineSed` currently lets you merge/coalesce two lines
+  into one, such as when you want to convert this:
+  
+````
+Hello
+-----
+````
+
+into this:
+
+````
+<h2>Hello</h2>
+````
+
+This is a first, barely-tested release of this code, so it
+surely has bugs.
+
+
+
+
