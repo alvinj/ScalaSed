@@ -2,11 +2,10 @@
 
 This is a little combination of projects:
 
-- The _Sed_ project provides `sed`-like capabilities
+- The _Sed_ project provides Unix/Linux `sed`-like capabilities
 - The _SedDemo_ provides demonstrates how to use `Sed`
 
-See the [SedDemo](SedDemo) project for examples of how to
-use `Sed`.
+See the SedDemo project for examples of how to use `Sed`.
 
 
 
