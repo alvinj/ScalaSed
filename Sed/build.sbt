@@ -1,6 +1,10 @@
 name := "Sed"
 version := "0.1"
 
+// this is a kludge to let me create a package (the main methods
+// don’t matter for packaging)
+mainClass in (Compile, packageBin) := Some("original.FileLookAhead")
+
 // libraryDependencies ++= Seq(
 //     "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 // )

@@ -34,6 +34,33 @@ When you call the Sed’s `run` method, your function is called with each line t
 
 
 
+## Using in a shell script
+
+My plan is to use Sed in a shell script, so here’s what that same code looks like as a (precompiled) Scala shell script:
+
+````
+#!/bin/sh
+exec scala -classpath ".:sed_2.12-0.1.jar:kaleidoscope_2.12-0.1.0.jar" -savecompiled "$0" "$@"
+!#
+
+import kaleidoscope._
+import scala.io.Source
+import com.alvinalexander.sed._
+
+def f(currentLine: String): String = currentLine match {
+    case r"^# ${header}@(.*)"  => s"<h1>$header</h1>"
+    case r"^## ${header}@(.*)" => s"<h2>$header</h2>"
+    case _                     => currentLine
+}
+
+val sed = new Sed("/Users/al/Projects/ScalaSed/EXAMPLE.md", f)
+sed.run
+````
+
+This source code comes from the _sedDemo.sh_ file in the _ScriptExample_ directory.
+
+
+
 ## `MultilineSed`
 
 There’s also a class named `MultilineSed` that lets you make updates to the previous line depending on what you find on the current line. That’s useful when you want to transform two lines like this:
