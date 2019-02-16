@@ -11,13 +11,16 @@ Here’s a little example of how to use the `Sed` class:
 ```scala
 object SedTest extends App {
 
-    def f(currentLine: String): String = currentLine match {
+    def updateLine(currentLine: String): String = currentLine match {
         case r"^# ${header}@(.*)"  => s"<h1>$header</h1>"
         case r"^## ${header}@(.*)" => s"<h2>$header</h2>"
         case _                     => currentLine
     }
 
-    val sed = new Sed("/Users/al/Projects/ScalaSed/EXAMPLE.md", f)
+    val sed = new Sed(
+        "/Users/al/Projects/ScalaSed/EXAMPLE.md", 
+        updateLine
+    )
     sed.run
 
 }
