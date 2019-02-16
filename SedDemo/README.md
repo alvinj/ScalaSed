@@ -46,12 +46,12 @@ into one output line like this:
 <h2>Hello</h2>
 ````
 
-I’ll add documentation for `MultilineSed` in the future, but for now you can look at [https://github.com/alvinj/ScalaSed/blob/master/SedDemo/src/main/scala/sed/MultilineSedTest.scala](MultilineSed.scala) to see how it works.
+I’ll add documentation for `MultilineSed` in the future, but for now you can look at [MultilineSed.scala](https://github.com/alvinj/ScalaSed/blob/master/SedDemo/src/main/scala/sed/MultilineSedTest.scala) to see how it works.
 
 
 
 ## Dependencies
 
-This project uses Jon Pretty’s [https://github.com/propensive/kaleidoscope](Kaleidoscope) project, which enables pattern-matching in Scala `match` expressions.
+This project uses Jon Pretty’s [Kaleidoscope](https://github.com/propensive/kaleidoscope) project, which enables pattern-matching in Scala `match` expressions.
 
 
