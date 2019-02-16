@@ -6,7 +6,7 @@ This project demonstrates how to use the Sed classes.
 
 ## `Sed` example
 
-Here’s a little example of how the `Sed` class works:
+Here’s a little example of how to use the `Sed` class:
 
 ```scala
 object SedTest extends App {
