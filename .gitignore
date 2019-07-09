@@ -1,6 +1,8 @@
 bin/
 target/
 build/
+.bloop
+.metals
 .cache
 .cache-main
 .classpath
