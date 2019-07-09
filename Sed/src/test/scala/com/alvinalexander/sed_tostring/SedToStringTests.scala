@@ -60,7 +60,7 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
     
     
 
-    //////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////( Jekyll Header/Delete )//////////////////////////////
 
     val headerIn = """---
     |partof: scala-tour
@@ -92,7 +92,7 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
         case _                     => UpdateLine(currentLine)
     }
 
-    test("delete stuff in header") {
+    test("delete stuff in jekyll header") {
         val source = Source.fromString(headerIn)
         val sed = new Sed(source, deleteStuffInHeader)
         val sedResult = sed.run
@@ -109,6 +109,9 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
         source.close
     }
 
+
+    //////////////////////////////( Jekyll Header/Update )//////////////////////////////
+
     val headerOutExpectedAfterUpdate = """---
     |partof: scala-tour
     |
@@ -120,15 +123,18 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
     |---
     |""".stripMargin
 
-    // update everything, don’t delete anything
+    /**
+     * this is a custom function for Sed that will update the desired fields
+     * in the header of a Jekyll file.
+     */
     def updateStuffInHeader(
         currentLine: String, 
         currentLineNum: Int, 
         kvMap: Map[String, String]
     ): SedAction = currentLine match {
         case r"^num:.*" => {
-            val num = kvMap("num")
-            UpdateLine(s"num: $num")
+            val fileNumber = kvMap("num")
+            UpdateLine(s"num: $fileNumber")
         }
         case r"^next-page:.*"     => {
             val nextPage = kvMap("next-page")
@@ -141,14 +147,14 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
         case _ => UpdateLine(currentLine)
     }
 
-    test("update stuff in header") {
-        val keyValueMap = Map(
+    test("update stuff in jekyll header") {
+        val source = Source.fromString(headerIn)
+        val mapNeededBySedFunction = Map(
             "num" -> "42",
             "next-page" -> "FOO",
             "prev-page" -> "BAR"
         )
-        val source = Source.fromString(headerIn)
-        val sed = new Sed(source, updateStuffInHeader, keyValueMap)
+        val sed = new Sed(source, updateStuffInHeader, mapNeededBySedFunction)
         val sedResult = sed.run
 
         // println("===== START headerOutExpectedAfterUpdate =====")
