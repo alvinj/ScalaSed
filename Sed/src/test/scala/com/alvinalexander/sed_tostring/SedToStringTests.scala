@@ -31,9 +31,7 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
     |""".stripMargin
 
     def basicSearchReplace(
-        currentLine: String, 
-        currentLineNum: Int,
-        kvMap: Map[String, String]
+        currentLine: String
     ): SedAction = currentLine match {
         // case r"^# ${header}@(.*)"  => s"<h1>$header</h1>"
         // case r"^## ${header}@(.*)" => s"<h2>$header</h2>"
@@ -43,7 +41,7 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
 
     test("basic search/replace") {
         val source = Source.fromString(s)
-        val sed = new Sed(source, basicSearchReplace)
+        val sed: SedTrait = SedFactory.getSed(source, basicSearchReplace _)
         val sResult = sed.run
 
         // println("===== START S1 ======")
@@ -94,7 +92,7 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
 
     test("delete stuff in jekyll header") {
         val source = Source.fromString(headerIn)
-        val sed = new Sed(source, deleteStuffInHeader)
+        val sed: SedTrait = SedFactory.getSed(source, deleteStuffInHeader _)
         val sedResult = sed.run
 
         // println("===== START headerOutExpected =====")
@@ -154,7 +152,11 @@ class SedToStringTests extends FunSuite with BeforeAndAfter {
             "next-page" -> "FOO",
             "prev-page" -> "BAR"
         )
-        val sed = new Sed(source, updateStuffInHeader, mapNeededBySedFunction)
+        val sed: SedTrait = SedFactory.getSed(
+            source, 
+            updateStuffInHeader _, 
+            mapNeededBySedFunction
+        )
         val sedResult = sed.run
 
         // println("===== START headerOutExpectedAfterUpdate =====")
