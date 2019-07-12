@@ -1,5 +1,5 @@
 name := "Sed"
-version := "0.2"
+version := "0.3"
 
 // this is a kludge to let me create a package (the main methods
 // don’t matter for packaging)
