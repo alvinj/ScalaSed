@@ -16,7 +16,10 @@ If you want to use this project to print directly to STDOUT, see the SedDemo sub
 
 If you want to use this project to return a `String`, or if you want more advanced capabilities, see the _com.alvinalexander.sed.tostring_ package in the Sed sub-project. I used it more recently, so it currently has more capabilities than the STDOUT Sed version.
 
-As a finaly note, I used to have more documentation here, but I’ve found that it’s easier to just keep the documentation in the subprojects, so please see the _Sed_ and _SedDemo_ subprojects for more information.
+As a final note, I used to have more documentation here, but I’ve found that it’s easier to just keep the documentation in the subprojects, so please see the _Sed_ and _SedDemo_ subprojects for more information.
+
+Alvin Alexander  
+https://alvinalexander.com
 
 
 
