@@ -1,4 +1,4 @@
-package com.alvinalexander.sed_tostring
+package com.alvinalexander.sed.tostring
 
 import scala.io.Source
 

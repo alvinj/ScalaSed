@@ -1,4 +1,4 @@
-package com.alvinalexander.sed
+package com.alvinalexander.sed.stdout
 
 import scala.io.Source
 
