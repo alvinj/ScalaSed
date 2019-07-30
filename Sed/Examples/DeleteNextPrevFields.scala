@@ -4,7 +4,7 @@
  */
 
 import kaleidoscope._
-import com.alvinalexander.sed_tostring._
+import com.alvinalexander.sed.tostring._
 import scala.io.Source
 import java.io._
 import java.nio.file.{Files, Paths, StandardCopyOption}
@@ -25,7 +25,14 @@ object DeleteNextPrevFields extends App {
         println(s"working on $inputFile ...")
 
         val source = Source.fromFile(inputFile)
-        val sed = new Sed(source, updateStuffInHeader)
+
+        //val sed = new Sed(source, updateStuffInHeader)
+        //val sedResult: String = sed.run
+        
+        val sed: SedTrait = SedFactory.getSed(
+            source,
+            updateStuffInHeader _
+        )
         val sedResult: String = sed.run
 
         // now have `newLines`. write the content back to the file.
