@@ -1,5 +1,6 @@
 name := "Sed"
 version := "0.4"
+scalaVersion := "2.12.12"
 
 // this is a kludge to let me create a package (the main methods
 // don’t matter for packaging)

@@ -2,9 +2,8 @@ package com.alvinalexander.sed.tostring
 
 import scala.io.Source
 
-
 /**
- * The possible actions that should be returned by your custom
+ * These are the possible actions that can be returned by your custom
  * function. Note that `UpdateLine` returns a String, so if you
  * want to prepend/append to the current line, you can return
  * a multiline string.
@@ -16,11 +15,11 @@ case class UpdateLine(s: String) extends SedAction
 /**
  * I hope to add more documentation in the future, but for now,
  * call Sed as shown in the test case examples, specifically the
- * *SedToStringTests*.
+ * `SedToStringTests`.
  * 
  * @param source For testing, `Source` can be `Scala.fromString`,
  * while in production it should be `Scala.fromFile`.
- * @param f The sed function, typically a `match` expression that details
+ * @param f Your “sed” function, typically a `match` expression that details
  * the changes you want made.
  * @param keyValueMap A set of key/value pairs that you want to perform 
  * search and replace operations on.
@@ -31,12 +30,12 @@ trait SedTrait {
 }
 
 /**
- * Bummer, there’s no reason to create a factory if Scala can’t tell
- * the difference between the function signatures.
- */
+  * This “factory” relies on the fact that the functions that are
+  * passed in are of type `Function3`, `Function2`, and `Function1`.
+  */
 object SedFactory {
 
-    // currentLine, currentLineNum, map
+    // the function parameters are: currentLine, currentLineNum, map
     def getSed(
         source: Source,
         f:(String, Int, Map[String, String]) => SedAction,
@@ -45,7 +44,7 @@ object SedFactory {
         new Sed3Params(source, f, keyValueMap)
     }
 
-    // currentLine, currentLineNum
+    // the function parameters are: currentLine, currentLineNum
     def getSed(
         source: Source, 
         f:(String, Int) => SedAction
@@ -53,7 +52,7 @@ object SedFactory {
         new SedCurrentLineAndNum(source, f)
     }
 
-    // currentLine
+    // the function parameter is: currentLine
     def getSed(
         source: Source, 
         f:(String) => SedAction
