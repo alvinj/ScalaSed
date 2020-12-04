@@ -2,6 +2,9 @@
 
 This project demonstrates how to use the Sed classes.
 
+**NOTICE:** This documentation shows an older version of the code. Please
+see the [Sed project](../Sed) for the latest version information. At some
+point I will update this demo code.
 
 
 ## Sed example

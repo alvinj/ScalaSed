@@ -1,8 +1,1 @@
-# Sed Examples
-
-The files in this directory are some Sed examples I created and
-used in July, 2019. The package names for Sed are no longer
-correct, but these _*.scala_ and _*.sh_ files show some
-examples of how to use Sed.
-
-
+This directory contains my latest ScalaSed script examples, which I used on December 3, 2020. They show the latest ScalaSed API, which is Version 0.4 at this time.
