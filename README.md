@@ -5,6 +5,11 @@ It seems like I use the Unix/Linux `sed` command somewhere between one and five 
 At one point I remember thinking, “I wish I could just do this easily with Scala,” and then I had that thought again, and again. Finally I broke down and took some time to create this “Scala Sed” project.
 
 
+## Update: December 3, 2020
+
+Please see [the Sed/README.md file](Sed/README.md) for the most up-to-date documentation. Everything else in the remainder of this file may be helpful for historic reasons, but that README file has the latest information.
+
+
 ## Project organization
 
 This project contains two sub-projects:
