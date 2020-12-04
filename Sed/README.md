@@ -10,6 +10,11 @@ Please see these classes for the latest code:
 - [The Sed.scala class](src/main/scala/com/alvinalexander/sed/tostring/Sed.scala)
 - [The tests in src/test/scala/com/alvinalexander](src/test/scala/com/alvinalexander)
 
+### The `MultilineSed` class
+
+Also, in the long term I still want the capabilities in my `MultilineSed` class. I don’t have any tests for it currently, but you can see an example of its usage in [the *MultilineSedTest.scala* file in the SedDemo project](../SedDemo/src/main/scala/sed/MultilineSedTest.scala)
+
+
 
 ## The latest code
 
@@ -24,7 +29,9 @@ The first purpose of this new code is so that I can return a `String` from Sed r
 >Any other code in this project that uses the older API is likely to go away in the future. At the moment, this includes the [SedDemo](SedDemo) code, which I haven’t updated yet.
 
 
-## Introduction (previous version)
+## Introduction (old version)
+
+**NOTE:** This discussion covers an older version of the code, but it’s still somewhat relevant, especially for the `MultilineSed` code, which hasn’t been updated yet; it still works as shown here.
 
 The code currently consists of two versions of this program under the _src/main/scala/com/alvinalexander/sed/stdout_ directory:
 
