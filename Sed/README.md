@@ -3,6 +3,14 @@
 This is a little bit of a “sed” project written in Scala. The short story is that I was getting tired of trying to remember the Unix/Linux `sed` syntax when I was writing various scripts to modify files, so I took a little time to create this project so I can write sed-like scripts in Scala.
 
 
+## Update: December, 2020
+
+Please see these classes for the latest code:
+
+- [The Sed.scala class](src/main/scala/com/alvinalexander/sed/tostring/Sed.scala)
+- [The tests in src/test/scala/com/alvinalexander](src/test/scala/com/alvinalexander)
+
+
 ## The latest code
 
 Update: As I use this library more, I find that it needs more features to be useful. Therefore, please consider the API to be very unstable and likely to change.

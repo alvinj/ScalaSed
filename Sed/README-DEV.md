@@ -1,5 +1,17 @@
 # For People Developing These Sed Classes
 
+
+## Update: December, 2020
+
+Please see these classes for the latest code:
+
+- [The Sed.scala class](src/main/scala/com/alvinalexander/sed/tostring/Sed.scala)
+- [The tests in src/test/scala/com/alvinalexander](src/test/scala/com/alvinalexander)
+
+
+
+## Older
+
 In July, 2019, I needed a new version of the Sed algorithms that return a String rather than writing directly to STDOUT. I also needed some other features, all of which led me to develop the code in the *com.alvinalexander.sed.tostring* package.
 
 The `SedFactory` approach in that package works for now, but may not be a good long-term solution. The problem is that it relies on the three classes taking function parameters that are of the types `Function1`, `Function2`, and `Function3`. If in the future I need another class that has the same signature as any of those current `Function[123]` function signatures, this approach will fail because of type erasure. More specifically, these two class signatures are seen as the same because of type erasure:
